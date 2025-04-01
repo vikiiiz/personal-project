@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Musics</title>
+    <link rel="icon" type="image/png" href="pngegg.png">
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">VIKRAM</a></li>
+            <li class="hideOnMobile"><a href="music.html">Music</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="contacts.html">Contacts</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+    <div class="videos-container">
+        <h2 class="videos-title">My Performances</h2>
+        <div class="videos-grid">
+            <div class="video-item">
+                <iframe width="0" height="301" src="https://www.youtube.com/embed/p4ZD4De874E?si=yivsCheVwMbc4siB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="420" height="301" src="https://www.youtube.com/embed/2f3z-_4Yt0Y?si=2a92fKIn9zyGFZ0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="420" height="301" src="https://www.youtube.com/embed/9t8T5GFnwPQ?si=82MMt7HdG1nyf0o_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="420" height="301" src="https://www.youtube.com/embed/d07zMP6MXNo?si=3n2tC5WJRq5fGo_q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="420" height="301" src="https://www.youtube.com/embed/ksjf0uxFx9E?si=0_Ie0iyYlrEa3-Hu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="420" height="301" src="https://www.youtube.com/embed/A3qD8N0WYrY?si=mQUKU1M07OMDxcm9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="420" height="301" src="https://www.youtube.com/embed/M5dddnF3dM0?si=ws9_Df-K4aXEkwVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <video width="420" height="343" controls>
+                    <source src="Scale Practice .mp4">
+                </video>
+            </div>
+            <div class="video-item">
+                <video width="420" height="343" controls>
+                    <source src="WhatsApp Video 2025-03-23 at 20.57.36_31d41e07.mp4">
+                </video>
+            </div>
+            <div class="video-item">
+                <iframe width="420" height="343" src="https://www.youtube.com/embed/NIs17UWa1AY?si=c8joeDQPFRt09UnG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar (){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar (){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
