@@ -3,51 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
-    <link rel="icon" type="image/png" href="pngegg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="contacts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">VIKRAM</a></li>
-            <li class="hideOnMobile"><a href="music.html">Music</a></li>
-            <li class="hideOnMobile"><a href="about.html">About</a></li>
-            <li class="hideOnMobile"><a href="contacts.html">Contacts</a></li>
-            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-        </ul>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-        </ul>
-    </nav>
-    <form action="https://formspree.io/f/mpwwepea" method="POST" class="container">
-        <h1>Contact Me</h1>
-        <input type="text" name="name" placeholder="your name" autocomplete="off" required>
-        <input type="text" name="email" placeholder="your email" autocomplete="off" required>
-        <textarea name="message" rows="5" cols="60" placeholder="your message" autocomplete="off" required max-width="100%" max-height="300px" resize="vertical"></textarea>
-        <button type="submit">Send Message</button>
-        
-        <div class="socialIcons">
-            <a href="https://www.youtube.com/@v1kkiiii_" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/v1kkiiiz_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@v1kkiiiiz_" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">Vikram</div>
+                <nav>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="togglebtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </header>
+            <section class="contact-section">
+                <form action="https://formspree.io/f/xzzeoqnv" method="POST">
+                    <h1>Contact Me</h1>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
         </div>
-    </form>
+    </div>
 
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Portfolio</a></li>
+                <li><a href="skills.html"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="contacts.html"><i class="fas fa-envelope"></i> Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://www.youtube.com/channel/UC4LDd9zy7q7uMv4xzBLIEPA"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/v1kkiiiz_/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/vikiiiz"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2024 Vikram. All rights reserved.</p>
+        </footer>
+    </div>
     <script>
-        function showSidebar (){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar (){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
+        const toggleBtn = document.querySelector('.togglebtn');
+        const sidebar = document.querySelector('.sidebar');
+        const closeBtn = document.querySelector('.close-btn');
+        
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
     </script>
 </body>
-
 </html>
